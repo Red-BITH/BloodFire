@@ -27,7 +27,7 @@ change() {
   if [ "$s" == "1" ]; then
     python system/setup.py 
   elif [ "$s" == "2" ]; then
-    python system/gui.py
+    sudo python system/gui.py
   fi
 }
 
