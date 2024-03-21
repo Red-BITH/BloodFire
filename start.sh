@@ -25,12 +25,16 @@ How will you setup tool?
 change() {
   read -p "$(printf '\033[0;34m--->')" s
   if [ "$s" == "1" ]; then
-    python system/setup.py
+    python system/setup.py 
   elif [ "$s" == "2" ]; then
-    python /system/setup2.py
-  else
-    change
+    python system/gui.py
   fi
 }
 
 change
+
+
+
+
+
+
