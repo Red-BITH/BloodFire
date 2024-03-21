@@ -37,6 +37,8 @@ def setup_libraries():
     create_request_files()
     clear_screen()
     show_output()
+    time.sleep(1)
+    show_output2()
 
 def show_output():
     # Ekranın alt kısmından başlayarak çıktıları göster
@@ -46,6 +48,8 @@ def show_output():
     output_label = tk.Label(root, text=output_text, font=("Arial", 15), fg="red",bg="white")
     output_label.place(relx=0.5, rely=0.9, anchor=tk.CENTER)
     time.sleep(1)
+    
+def show_output2():
     output_text = "Codes İnstalled✓" 
 
     # Label oluştur ve çıktıları göster
