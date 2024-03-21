@@ -58,8 +58,8 @@ def create_window():
     root.configure(bg="white")
 
     # Resimleri yükle
-    image_path1 = r"C:\Users\HUAWEI\Pictures\Screenshots\Ekran şəkli 2024-03-21 044623.png"
-    image_path2 = r"C:\Users\HUAWEI\Pictures\Screenshots\Ekran şəkli 2024-03-21 044813.png"
+    image_path1 = r"resim1.png"
+    image_path2 = r"resim2.png"
 
     # Resimleri aç ve boyutlandır
     image1 = Image.open(image_path1)
