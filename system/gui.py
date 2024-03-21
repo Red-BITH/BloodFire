@@ -33,7 +33,7 @@ def clear_screen():
  
 def setup_libraries():
     install_libraries()
-=    create_request_files()
+    create_request_files()
     clear_screen()
     show_output()
     time.sleep(1)
