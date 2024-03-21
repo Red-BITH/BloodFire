@@ -30,7 +30,7 @@ def create_request_files():
 
 def clear_screen():
     # Ekranı temizle
-    os.system("cls")
+    os.system("clear")
 
 def setup_libraries():
     install_libraries()
@@ -54,7 +54,7 @@ def show_output2():
 
     # Label oluştur ve çıktıları göster
     output_label = tk.Label(root, text=output_text, font=("Arial", 15), fg="red",bg="white")
-    output_label.place(relx=0.5, rely=0.9, anchor=tk.CENTER)
+    output_label.place(relx=1.0, rely=0.9, anchor=tk.CENTER)
     
 
 def create_window():
