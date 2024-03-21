@@ -8,7 +8,7 @@ def install_libraries():
     os.system("pip install bs4")
 
 def create_request_files():
-    current_directory = os.getcwd()
+    
 
     # request.txt dosyasını oluştur
     request_file_path = os.path.join(current_directory, 'log', 'request.txt')
