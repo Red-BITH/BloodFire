@@ -1,6 +1,8 @@
-import os
-print("""\033[0;31m
+#!/bin/bash
 
+printf "\033[0;31m"
+
+cat << "EOF"
  ██████╗    ██╗  ██╗     █████╗     ███╗   ██╗     ██████╗     ███████╗
 ██╔════╝    ██║  ██║    ██╔══██╗    ████╗  ██║    ██╔════╝     ██╔════╝
 ██║         ███████║    ███████║    ██╔██╗ ██║    ██║  ███╗    █████╗  
@@ -8,8 +10,9 @@ print("""\033[0;31m
 ╚██████╗    ██║  ██║    ██║  ██║    ██║ ╚████║    ╚██████╔╝    ███████╗
  ╚═════╝    ╚═╝  ╚═╝    ╚═╝  ╚═╝    ╚═╝  ╚═══╝     ╚═════╝     ╚══════╝
                                                                        
-""")
-print("""\033[1;33m 
+EOF
+
+printf "\033[1;33m 
 
 How will you setup tool?
 (write number)
@@ -17,14 +20,17 @@ How will you setup tool?
 1 - setup with Terminal
 2 - setup with Gui (only kali linux! and you will just do the setup with the gui)
 
-""")
-def change():
-  s = input("\033[0;34m--->")
-  if s == "1":
-   os.system("sudo python system/setup.py")
-  elif s == "2":
-    os.system("sudo python /system/setup2.py")
-  else:
-    change()
+"
 
-change()
+change() {
+  read -p "$(printf '\033[0;34m--->')" s
+  if [ "$s" == "1" ]; then
+    sudo python system/setup.py
+  elif [ "$s" == "2" ]; then
+    sudo python /system/setup2.py
+  else
+    change
+  fi
+}
+
+change
