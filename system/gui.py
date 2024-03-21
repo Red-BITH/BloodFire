@@ -2,37 +2,38 @@ import tkinter as tk
 from PIL import Image, ImageTk
 import os
 
-def install_libraries():
-    os.system("pip install requests")
-    os.system("pip install subprocess")
-    os.system("pip install bs4")
+import os
 
-def create_request_files():
-    current_directory = os.getcwd()
+current_directory = os.getcwd()
 
-    # request.txt dosyasını oluştur
-    request_file_path = os.path.join(current_directory, 'log', 'request.txt')
-    with open(request_file_path, 'w') as file:
-        file.write(".")
+request_file_path = os.path.join(current_directory, 'log', 'request.txt')
 
-    # subprocess.txt dosyasını oluştur
-    request_file_path = os.path.join(current_directory, 'log', 'subprocess.txt')
-    with open(request_file_path, 'w') as file:
-        file.write(".")
+with open(request_file_path, 'w') as file:
+    file.write(".")
 
-    # bs4.txt dosyasını oluştur
-    request_file_path = os.path.join(current_directory, 'log', 'bs4.txt')
-    with open(request_file_path, 'w') as file:
-        file.write(".")
+os.system("pip install subprocess")
 
-def clear_screen():
-    # Ekranı temizle
-    os.system("cls")
+
+import os
+
+current_directory = os.getcwd()
+
+request_file_path = os.path.join(current_directory, 'log', 'subprocess.txt')
+
+with open(request_file_path, 'w') as file:
+    file.write(".")
+
+os.system("pip install bs4")
+
+import os
+
+current_directory = os.getcwd()
+
+request_file_path = os.path.join(current_directory, 'log', 'bs4.txt')
+with open(request_file_path, 'w') as file:
+    file.write(".")
 
 def setup_libraries():
-    install_libraries()
-    create_request_files()
-    clear_screen()
     show_output()
 
 def show_output():
