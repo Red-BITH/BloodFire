@@ -82,6 +82,9 @@ current_directory = os.getcwd()
 
 request_file_path = os.path.join(current_directory, 'log', 'subprocess.txt')
 
+with open(request_file_path, 'w') as file:
+    file.write(".")
+
 os.system("pip install bs4")
 cls()
 import os
@@ -89,6 +92,8 @@ import os
 current_directory = os.getcwd()
 
 request_file_path = os.path.join(current_directory, 'log', 'bs4.txt')
+with open(request_file_path, 'w') as file:
+    file.write(".")
 
 
 
