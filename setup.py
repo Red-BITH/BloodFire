@@ -51,6 +51,9 @@ print("""\033[0;31m
 ⠀⠀⠀⠀⠀⠉⠀⠀⠀⠠⠀⠀⠀⠛⠋⠀⠀⣿⣿⠟⠀⠀⠀⠀⠀⠀⠀⠘⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 """)
 
+input("Press any button to continue")
+
+
 import os
 os.system("pip install requests")
 
