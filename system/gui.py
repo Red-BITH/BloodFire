@@ -1,6 +1,9 @@
 import tkinter as tk
 from PIL import Image, ImageTk
 import os
+import time
+
+root = None
 
 def install_libraries():
     os.system("pip install requests")
@@ -37,13 +40,21 @@ def setup_libraries():
 
 def show_output():
     # Ekranın alt kısmından başlayarak çıktıları göster
-    output_text = "Output 1\nOutput 2\nOutput 3"  # İlgili çıktıları burada belirtin
+    output_text = "Library İnstalled✓" 
 
     # Label oluştur ve çıktıları göster
-    output_label = tk.Label(root, text=output_text, font=("Helvetica", 12), bg="white")
+    output_label = tk.Label(root, text=output_text, font=("Arial", 15), fg="red",bg="white")
     output_label.place(relx=0.5, rely=0.9, anchor=tk.CENTER)
+    time.sleep(1)
+    output_text = "Codes İnstalled✓" 
+
+    # Label oluştur ve çıktıları göster
+    output_label = tk.Label(root, text=output_text, font=("Arial", 15), fg="red",bg="white")
+    output_label.place(relx=0.5, rely=0.9, anchor=tk.CENTER)
+    
 
 def create_window():
+    global root
     # Ana pencere oluştur
     root = tk.Tk()
     root.title("BloodFire")
