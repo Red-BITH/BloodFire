@@ -20,10 +20,11 @@ How will you setup tool?
 """)
 def change():
   s = input("\033[0;34m--->")
-  
   if s == "1":
-    os.system("sudo python /log/setup.py")
+   os.system("sudo python system/setup.py")
   elif s == "2":
-    os.system("sudo python /log/setup2.py")
+    os.system("sudo python /system/setup2.py")
   else:
     change()
+
+change()
