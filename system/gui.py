@@ -42,7 +42,7 @@ def setup_libraries():
 
 def show_output():
     # Ekranın alt kısmından başlayarak çıktıları göster
-    output_text = "Library İnstalled✓" 
+    output_text = "Library Installed✓" 
 
     # Label oluştur ve çıktıları göster
     output_label = tk.Label(root, text=output_text, font=("Arial", 15), fg="red",bg="white")
@@ -50,27 +50,17 @@ def show_output():
     time.sleep(1)
     
 def show_output2():
-    output_text = "Codes İnstalled✓" 
+    output_text = "Codes Installed✓" 
 
     # Label oluştur ve çıktıları göster
     output_label = tk.Label(root, text=output_text, font=("Arial", 15), fg="red",bg="white")
     output_label.place(relx=1.0, rely=0.9, anchor=tk.CENTER)
-    
 
-def create_window():
-    global root
-    # Ana pencere oluştur
-    root = tk.Tk()
-    root.title("BloodFire")
-
-    # Pencere boyutunu ayarla
-    window_width = 600
-    window_height = 400
-    root.geometry("%dx%d" % (window_width, window_height))
-    root.resizable(False, False)  # Pencerenin boyutunu değiştiremezsiniz
-
-    # Pencere arka plan rengini beyaz yap
-    root.configure(bg="white")
+def create_new_window():
+    new_window = tk.Toplevel(root)
+    new_window.title("BloodFire")
+    new_window.geometry("600x400")
+    new_window.configure(bg="white")
 
     # Resimleri yükle
     image_path1 = r"resim1.png"
@@ -86,21 +76,29 @@ def create_window():
     photo2 = ImageTk.PhotoImage(image2)
 
     # Sol üst köşeye birinci resmi yerleştir
-    label1 = tk.Label(root, image=photo1, bg="white")
+    label1 = tk.Label(new_window, image=photo1, bg="white")
     label1.grid(row=0, column=0, padx=10, pady=10)
 
     # Merkez üstte kırmızı yazıyı yerleştir
-    label3 = tk.Label(root, text="BLOODFIRE", font=("Helvetica", 24, "bold"), fg="red", bg="white")
+    label3 = tk.Label(new_window, text="BLOODFIRE", font=("Helvetica", 24, "bold"), fg="red", bg="white")
     label3.grid(row=0, column=1, padx=10, pady=10)
 
     # Üst sağda ikinci resmi yerleştir
-    label2 = tk.Label(root, image=photo2, bg="white")
+    label2 = tk.Label(new_window, image=photo2, bg="white")
     label2.grid(row=0, column=2, padx=10, pady=10)
 
-    # Butonu oluştur
-    button_setup = tk.Button(root, text="Setup", font=("Helvetica", 16, "bold"), command=setup_libraries)
-    button_setup.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
+    # Setup completed yazısı
+    setup_completed_label = tk.Label(new_window, text="Setup completed", font=("Arial", 15), fg="green", bg="white")
+    setup_completed_label.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
 
-    root.mainloop()
+def create_window():
+    global root
+    # Ana pencere oluştur
+    root = tk.Tk()
+    root.title("BloodFire")
 
-create_window()
+    # Pencere boyutunu ayarla
+    window_width = 600
+    window_height = 400
+    root.geometry("%dx%d" % (window_width, window_height))
+    root.resizable(False,
