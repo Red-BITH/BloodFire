@@ -134,4 +134,4 @@ def sil():
             f.write(response.content)
         print("\033[0;32mstart.py file succesfuly installed.")
     else:
-        print("\033[0;31m"SOMETHING WENT WRONG!!!")
+        print("\033[0;31mSOMETHING WENT WRONG!!!")
