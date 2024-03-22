@@ -3,7 +3,7 @@ from tkinter import ttk
 from PIL import Image, ImageTk
 import os
 import time
-import threading
+import requests
 
 def install_libraries():
     os.system("pip install requests")
@@ -50,21 +50,10 @@ def clear_screen():
     os.system("clear")
  
 def setup_libraries():
-    # ProgressBar'yu görünür yap
-    progress_bar.start()
-    
-    # Kütüphanelerin kurulumu ve diğer işlemler burada çağırılacak
     install_libraries()
     create_request_files()
     clear_screen()
-
-    # Simüle edilmiş işlem süresi
-    time.sleep(5)
-
-    # ProgressBar'yu durdur
-    progress_bar.stop()
-
-    # Diğer işlemleri devam ettir
+    
     show_output()
     time.sleep(1)
     show_output2()
@@ -144,11 +133,6 @@ def create_window():
     # Butonu oluştur
     button_setup = tk.Button(root, text="Setup", font=("Helvetica", 16, "bold"), command=setup_libraries)
     button_setup.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
-    
-    # ProgressBar oluştur
-    global progress_bar
-    progress_bar = ttk.Progressbar(root, orient='horizontal', mode='indeterminate', length=300)
-    progress_bar.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
 
     root.mainloop()
 
