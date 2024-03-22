@@ -76,9 +76,12 @@ def show_output2():
     time.sleep(3)
     open_new_window()
 
-def open_new_window():
-    time.sleep(1)
+def open_new_window_and_close_old():
     global root
+    # Eski pencereyi kapat
+    root.destroy()
+
+    # Yeni pencereyi oluştur
     new_window = tk.Tk()
     new_window.title("Setup Completed")
     new_window.geometry("600x400")
