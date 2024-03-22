@@ -88,6 +88,14 @@ def open_new_window_and_close_old():
     new_window.configure(bg="white")
     completed_label = tk.Label(new_window, text="SETUP COMPLETED✓", font=("Helvetica", 24, "bold"), fg="green", bg="white")
     completed_label.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
+    
+    # Copyright ve Github bilgilerini ekleyin
+    copyright_label = tk.Label(new_window, text="©Copyright 2024 RedTools Project", font=("Arial", 8, "bold"), fg="black", bg="white")
+    copyright_label.place(relx=0.5, rely=0.9, anchor=tk.CENTER)
+    
+    github_label = tk.Label(new_window, text="Github: github.com/Red-BITH", font=("Arial", 8, "bold"), fg="black", bg="white")
+    github_label.place(relx=0.5, rely=0.95, anchor=tk.CENTER)
+    
     new_window.mainloop()
 
 def create_window():
