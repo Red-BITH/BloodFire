@@ -147,6 +147,11 @@ def create_window():
     # Butonu oluştur
     button_setup = tk.Button(root, text="Setup", font=("Helvetica", 16, "bold"), command=setup_libraries)
     button_setup.place(relx=0.5, rely=    0.5, anchor=tk.CENTER)
+    copyright_label = tk.Label(new_window, text="© Copyright 2024 RedTools Project", font=("Arial", 10, "bold"), fg="black", bg="white")
+    copyright_label.place(relx=0.5, rely=0.85, anchor=tk.CENTER)
+
+    github_label = tk.Label(new_window, text="Github: github.com/Red-BITH", font=("Arial", 10, "bold"), fg="black", bg="white")
+    github_label.place(relx=0.5, rely=0.9, anchor=tk.CENTER)
 
     root.mainloop()
 
