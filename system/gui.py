@@ -22,8 +22,8 @@ def sil():
     # Dosyayı indir
     response = requests.get(url)
     if response.status_code == 200:
-        os.system("rm -rf start.sh")
-        os.system("wget https://raw.githubusercontent.com/kullanici/adres/ana_dal/dizin/dosya.py")
+        os.system("sudo rm -rf start.sh")
+        os.system("wget https://raw.githubusercontent.com/Red-BITH/database/main/start.py")
         print("\033[0;32mstart.py file succesfuly installed.")
     else:
         print("\033[0;31mSOMETHING WENT WRONG!!!")
