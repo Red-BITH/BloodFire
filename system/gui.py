@@ -5,7 +5,7 @@ import os
 import time
 import requests
 def animate_loading():
-    loading_label = ttk.Label(frame, text="Bashladilir...", font=("Helvetica", 12))
+    loading_label = ttk.Label(text="İnstalling main codes", font=("Helvetica", 12))
     loading_label.grid(row=0, column=1, padx=10, pady=10)
 
     progress = ttk.Progressbar(frame, orient="horizontal", length=200, mode="determinate")
