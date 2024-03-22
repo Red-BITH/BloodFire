@@ -54,11 +54,11 @@ def show_output2():
     # Label oluştur ve çıktıları göster
     output_label = tk.Label(root, text=output_text, font=("Arial", 15), fg="red",bg="white")
     output_label.place(relx=0.5, rely=0.9, anchor=tk.CENTER)
-    time.sleep(1)
+    time.sleep(3)
     open_new_window()
 
 def open_new_window():
-    time.sleep(2)
+    time.sleep(1)
     global root
     new_window = tk.Tk()
     new_window.title("Setup Completed")
