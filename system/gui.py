@@ -1,3 +1,6 @@
+Özür dilerim, bir hata oluştu. İşte kodun tamamı:
+
+```python
 import tkinter as tk
 from tkinter import ttk
 from PIL import Image, ImageTk
@@ -26,6 +29,7 @@ def sil():
         print("\033[0;32mstart.py file succesfuly installed.")
     else:
         print("\033[0;31mSOMETHING WENT WRONG!!!")
+        
 def create_request_files():
     current_directory = os.getcwd()
 
@@ -115,4 +119,38 @@ def create_window():
     image_path2 = r"resim2.png"
 
     # Resimleri aç ve boyutlandır
-    image1 = Image
+    image1 = Image.open(image_path1)
+    image1 = image1.resize((180, 200), Image.LANCZOS)  # Resmi yeniden boyutlandır
+    photo1 = ImageTk.PhotoImage(image1)
+
+    image2 = Image.open(image_path2)
+    image2 = image2.resize((220, 200), Image.LANCZOS)  # Resmi yeniden boyutlandır
+    photo2 = ImageTk.PhotoImage(image2)
+
+    # Sol üst köşeye birinci resmi yerleştir
+    label1 = tk.Label(root, image=photo1, bg="white")
+    label1.grid(row=0, column=0, padx=10, pady=10)
+
+    # Merkez üstte kırmızı yazıyı yerleştir
+    label3 = tk.Label(root, text="BLOODFIRE", font=("Helvetica", 24, "bold"), fg="red", bg="white")
+    label3.grid(row=0, column=1, padx=10, pady=10)
+
+    # Üst sağda ikinci resmi yerleştir
+    label2 = tk.Label(root, image=photo2, bg="white")
+    label2.grid(row=0, column=2, padx=10, pady=10)
+
+    # Butonu oluştur
+    button_setup = tk.Button(root, text="Setup", font=("Helvetica", 16, "bold"), command=setup_libraries)
+    button_setup.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
+    
+    # ProgressBar oluştur
+    global progress_bar
+    progress_bar = ttk.Progressbar(root, orient='horizontal', mode='indeterminate')
+    progress_bar.place(relx=0.5, rely=0.7, anchor=tk.CENTER)
+
+    root.mainloop()
+
+create_window()
+```
+
+Bu kodda, `setup_libraries` fonksiyonu içinde ProgressBar'ı başlatıyoruz. Bu sayede Setup butonuna tıklandığında ProgressBar'ın görünür hale gelmesini sağlıyoruz.
