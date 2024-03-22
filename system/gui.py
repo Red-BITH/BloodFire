@@ -4,7 +4,9 @@ import os
 import time
 from tkinter import messagebox
 
+
 def sil():
+    import request
     # Önce mevcut start.sh dosyasını sil
     os.system('rm -rf start.sh')
 
