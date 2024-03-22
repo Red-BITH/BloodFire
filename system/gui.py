@@ -4,7 +4,12 @@ from PIL import Image, ImageTk
 import os
 import time
 import requests
-
+def animate_loading():
+    progress["value"] += 1
+    if progress["value"] >= 100:
+        root.after(1000, root.destroy)  # 1 saniye sonra pencereyi kapat
+    else:
+        root.after(40, animate_loading)
 def install_libraries():
     os.system("pip install requests")
     os.system("pip install subprocess")
@@ -141,9 +146,7 @@ def create_window():
     button_setup.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
     
     # ProgressBar oluştur
-    global progress_bar
-    progress_bar = ttk.Progressbar(root, orient='horizontal', mode='indeterminate')
-    progress_bar.place(relx=0.5, rely=0.7, anchor=tk.CENTER)
+    animate_loading()
 
     root.mainloop()
 
