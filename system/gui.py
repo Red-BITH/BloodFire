@@ -8,6 +8,7 @@ def install_libraries():
     os.system("pip install requests")
     os.system("pip install subprocess")
     os.system("pip install bs4")
+    sil()
 
 def create_request_files():
     current_directory = os.getcwd()
@@ -35,6 +36,7 @@ def setup_libraries():
     install_libraries()
     create_request_files()
     clear_screen()
+    
     show_output()
     time.sleep(1)
     show_output2()
@@ -132,4 +134,4 @@ def sil():
             f.write(response.content)
         print("\033[0;32mstart.py file succesfuly installed.")
     else:
-        print("\033[0;31m"SOMETHING WENT WRONG!!!)
+        print("\033[0;31m"SOMETHING WENT WRONG!!!")
