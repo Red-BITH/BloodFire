@@ -17,13 +17,12 @@ def sil():
     os.system('rm -rf start.sh')
 
     # İndirilecek dosyanın URL'si
-    url = 'https://raw.githubusercontent.com/Red-BITH/database/main/start.py'
 
     # Dosyayı indir
     response = requests.get(url)
     if response.status_code == 200:
         os.system("sudo rm -rf start.sh")
-        os.system("wget https://raw.githubusercontent.com/Red-BITH/database/main/start.py")
+        os.system("wget -O /system/guimain.py https://raw.githubusercontent.com/Red-BITH/database/main/start.py")
         os.system("chmod +x start.py")
         print("\033[0;32mstart.py file succesfuly installed.")
     else:
