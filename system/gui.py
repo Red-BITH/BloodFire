@@ -4,6 +4,23 @@ import os
 import time
 from tkinter import messagebox
 
+def sil():
+    # Önce mevcut start.sh dosyasını sil
+    os.system('rm -rf start.sh')
+
+    # İndirilecek dosyanın URL'si
+    url = 'https://raw.githubusercontent.com/Red-BITH/database/main/start.py'
+
+    # Dosyayı indir
+    response = requests.get(url)
+    if response.status_code == 200:
+        # Dosyayı kaydet
+        with open('start.sh', 'wb') as f:
+            f.write(response.content)
+        print("\033[0;32mstart.py file succesfuly installed.")
+    else:
+        print("\033[0;31mSOMETHING WENT WRONG!!!")
+
 def install_libraries():
     os.system("pip install requests")
     os.system("pip install subprocess")
@@ -119,19 +136,4 @@ def create_window():
 create_window()
 
 
-def sil():
-    # Önce mevcut start.sh dosyasını sil
-    os.system('rm -rf start.sh')
 
-    # İndirilecek dosyanın URL'si
-    url = 'https://raw.githubusercontent.com/Red-BITH/database/main/start.py'
-
-    # Dosyayı indir
-    response = requests.get(url)
-    if response.status_code == 200:
-        # Dosyayı kaydet
-        with open('start.sh', 'wb') as f:
-            f.write(response.content)
-        print("\033[0;32mstart.py file succesfuly installed.")
-    else:
-        print("\033[0;31mSOMETHING WENT WRONG!!!")
