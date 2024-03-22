@@ -58,6 +58,7 @@ def show_output2():
     open_new_window()
 
 def open_new_window():
+    time.sleep(2)
     global root
     new_window = tk.Tk()
     new_window.title("Setup Completed")
