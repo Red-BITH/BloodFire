@@ -74,7 +74,7 @@ def show_output2():
     output_label = tk.Label(root, text=output_text, font=("Arial", 15), fg="red",bg="white")
     output_label.place(relx=0.5, rely=0.9, anchor=tk.CENTER)
     time.sleep(3)
-    open_new_window()
+    open_new_window_and_close_old()
 
 def open_new_window_and_close_old():
     global root
