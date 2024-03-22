@@ -86,15 +86,22 @@ def open_new_window_and_close_old():
     new_window.title("Setup Completed")
     new_window.geometry("600x400")
     new_window.configure(bg="white")
-    completed_label = tk.Label(new_window, text="SETUP COMPLETED✓", font=("Helvetica", 24, "bold"), fg="green", bg="white")
-    completed_label.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
-    
+
+    # Setup completed yazısını biraz üste taşıp rengini sarı yapalım
+    completed_label = tk.Label(new_window, text="SETUP COMPLETED✓", font=("Helvetica", 24, "bold"), fg="yellow", bg="white")
+    completed_label.place(relx=0.5, rely=0.3, anchor=tk.CENTER)
+
+    # Copyright ve Github bilgilerini ekleyelim
     copyright_label = tk.Label(new_window, text="© Copyright 2024 RedTools Project", font=("Arial", 10, "bold"), fg="black", bg="white")
     copyright_label.place(relx=0.5, rely=0.85, anchor=tk.CENTER)
-    
+
     github_label = tk.Label(new_window, text="Github: github.com/Red-BITH", font=("Arial", 10, "bold"), fg="black", bg="white")
-    github_label.place(relx=0.5, rely=0.95, anchor=tk.CENTER)
-    
+    github_label.place(relx=0.5, rely=0.9, anchor=tk.CENTER)
+
+    # Alt kısıma yazıları yerleştirelim
+    run_label = tk.Label(new_window, text="You can run the tool with the command $python start.py in the terminal.", font=("Arial", 12, "bold"), fg="green", bg="white")
+    run_label.place(relx=0.5, rely=0.65, anchor=tk.CENTER)
+
     new_window.mainloop()
 
 def create_window():
@@ -139,14 +146,7 @@ def create_window():
 
     # Butonu oluştur
     button_setup = tk.Button(root, text="Setup", font=("Helvetica", 16, "bold"), command=setup_libraries)
-    button_setup.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
-
-    # Alt kısma yazıları yerleştir
-    copyright_label = tk.Label(root, text="© Copyright 2024 RedTools Project", font=("Arial", 10, "bold"), fg="black", bg="white")
-    copyright_label.place(relx=0.5, rely=0.85, anchor=tk.CENTER)
-
-    github_label = tk.Label(root, text="Github: github.com/Red-BITH", font=("Arial", 10, "bold"), fg="black", bg="white")
-    github_label.place(relx=0.5, rely=0.9, anchor=tk.CENTER)
+    button_setup.place(relx=0.5, rely=    0.5, anchor=tk.CENTER)
 
     root.mainloop()
 
