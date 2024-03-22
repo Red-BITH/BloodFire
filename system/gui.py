@@ -2,8 +2,6 @@ import tkinter as tk
 from PIL import Image, ImageTk
 import os
 import time
-from tkinter import messagebox
-
 
 def install_libraries():
     os.system("pip install requests")
@@ -28,6 +26,7 @@ def sil():
         print("\033[0;32mstart.py file succesfuly installed.")
     else:
         print("\033[0;31mSOMETHING WENT WRONG!!!")
+
 def create_request_files():
     current_directory = os.getcwd()
 
@@ -128,13 +127,13 @@ def create_window():
     label2 = tk.Label(root, image=photo2, bg="white")
     label2.grid(row=0, column=2, padx=10, pady=10)
 
+    def launch_program():
+        os.system("python start.py")
+
     # Butonu oluştur
-    button_setup = tk.Button(root, text="Setup", font=("Helvetica", 16, "bold"), command=setup_libraries)
-    button_setup.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
+    button_launch = tk.Button(root, text="Launch", font=("Helvetica", 16, "bold"), command=launch_program)
+    button_launch.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
 
     root.mainloop()
 
 create_window()
-
-
-
