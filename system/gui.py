@@ -17,7 +17,7 @@ def sil():
     os.system('rm -rf start.sh')
 
     # İndirilecek dosyanın URL'si
-
+    url = https://raw.githubusercontent.com/Red-BITH/database/main/start.py
     # Dosyayı indir
     response = requests.get(url)
     if response.status_code == 200:
