@@ -1,9 +1,9 @@
 import tkinter as tk
+from tkinter import ttk
 from PIL import Image, ImageTk
 import os
 import time
-from tkinter import messagebox
-
+import requests
 
 def install_libraries():
     os.system("pip install requests")
@@ -12,7 +12,6 @@ def install_libraries():
     sil()  # start.py dosyasını indirme fonksiyonunu çağır
 
 def sil():
-    import requests
     # Önce mevcut start.sh dosyasını sil
     os.system('rm -rf start.sh')
 
@@ -50,6 +49,9 @@ def clear_screen():
     os.system("clear")
  
 def setup_libraries():
+    # ProgressBar'yu görünür yap
+    progress_bar.start()
+    
     install_libraries()
     create_request_files()
     clear_screen()
@@ -57,6 +59,9 @@ def setup_libraries():
     show_output()
     time.sleep(1)
     show_output2()
+    
+    # ProgressBar'yu durdur
+    progress_bar.stop()
 
 def show_output():
     # Ekranın alt kısmından başlayarak çıktıları göster
@@ -133,6 +138,11 @@ def create_window():
     # Butonu oluştur
     button_setup = tk.Button(root, text="Setup", font=("Helvetica", 16, "bold"), command=setup_libraries)
     button_setup.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
+    
+    # ProgressBar oluştur
+    global progress_bar
+    progress_bar = ttk.Progressbar(root, mode="indeterminate", length=200)
+    progress_bar.place(relx=0.5, rely=0.65, anchor=tk.CENTER)
 
     root.mainloop()
 
