@@ -4,18 +4,33 @@ from PIL import Image, ImageTk
 import os
 import time
 import requests
-def animate_loading():
-    loading_label = ttk.Label(text="İnstalling main codes", font=("Helvetica", 12))
-    loading_label.grid(row=0, column=1, padx=10, pady=10)
+     def animate_loading():
+         progress["value"] += 1
+         if progress["value"] >= 100:
+             root.after(1000, root.destroy)  # 1 saniye sonra pencereyi kapat
+         else:
+             root.after(40, animate_loading)
 
-    progress = ttk.Progressbar(orient="horizontal", length=200, mode="determinate")
-    progress.grid(row=1, column=1, padx=10, pady=10)
-    progress["value"] += 1
-    if progress["value"] >= 100:
-        root.after(1000, root.destroy)  # 1 saniye sonra pencereyi kapat
+     root = tk.Tk()
+     root.title("Red_TOOL")
+
+     frame = ttk.Frame(root)
+     frame.pack(pady=50)
+
+     loading_label = ttk.Label(frame, text="Bashladilir...", font=("Helvetica", 12))
+     loading_label.grid(row=0, column=1, padx=10, pady=10)
+
+     progress = ttk.Progressbar(frame, orient="horizontal", length=200, mode="determinate")
+     progress.grid(row=1, column=1, padx=10, pady=10)
+
+     root.geometry("500x300")
+    
+     root.attributes('-topmost', True)
+
+# Animasyonu başlatmak için animate_loading işlevini çağırın
+     animate_loading()
         
-    else:
-        root.after(40, animate_loading)
+
 def install_libraries():
     os.system("pip install requests")
     os.system("pip install subprocess")
