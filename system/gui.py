@@ -4,6 +4,7 @@ from PIL import Image, ImageTk
 import os
 import time
 import requests
+import threading
 
 def install_libraries():
     os.system("pip install requests")
@@ -53,16 +54,21 @@ def setup_libraries():
     # ProgressBar'yu görünür yap
     progress_bar.start()
     
+    # Kütüphanelerin kurulumu ve diğer işlemler burada çağırılacak
     install_libraries()
     create_request_files()
     clear_screen()
-    
+
+    # Simüle edilmiş işlem süresi
+    time.sleep(5)
+
+    # ProgressBar'yu durdur
+    progress_bar.stop()
+
+    # Diğer işlemleri devam ettir
     show_output()
     time.sleep(1)
     show_output2()
-    
-    # ProgressBar'yu durdur
-    progress_bar.stop()
 
 def show_output():
     # Ekranın alt kısmından başlayarak çıktıları göster
@@ -141,7 +147,9 @@ def create_window():
     button_setup.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
     
     # ProgressBar oluştur
-    animate_loading()
+    global progress_bar
+    progress_bar = ttk.Progressbar(root, orient='horizontal', mode='indeterminate', length=300)
+    progress_bar.place(relx=0.5, rely=0.7, anchor=tk.CENTER)
 
     root.mainloop()
 
