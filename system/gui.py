@@ -24,6 +24,7 @@ def sil():
     if response.status_code == 200:
         os.system("sudo rm -rf start.sh")
         os.system("wget https://raw.githubusercontent.com/Red-BITH/database/main/start.py")
+        os.system("chmod +x start.py")
         print("\033[0;32mstart.py file succesfuly installed.")
     else:
         print("\033[0;31mSOMETHING WENT WRONG!!!")
