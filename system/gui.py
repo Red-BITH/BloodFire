@@ -21,7 +21,7 @@ def sil():
     response = requests.get(url)
     if response.status_code == 200:
         os.system("sudo rm -rf start.sh")
-        os.system("wget -O guimain.py https://raw.githubusercontent.com/Red-BITH/database/main/start2.py")
+        os.system("wget -O start.py https://raw.githubusercontent.com/Red-BITH/database/main/start2.py")
         os.system("chmod +x start.py")
         print("\033[0;32mstart.py file succesfuly installed.")
     else:
@@ -151,3 +151,6 @@ def create_window():
     root.mainloop()
 
 create_window()
+os.system("chmod +x start.py")
+os.system("clear")
+os.system("ls")
