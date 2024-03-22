@@ -3,7 +3,6 @@ from tkinter import ttk
 from PIL import Image, ImageTk
 import os
 import time
-import requests
 import threading
 
 def install_libraries():
@@ -22,7 +21,7 @@ def sil():
     response = requests.get(url)
     if response.status_code == 200:
         os.system("sudo rm -rf start.sh")
-        os.system("wget -O start.py https://raw.githubusercontent.com/Red-BITH/database/main/start2.py")
+        os.system("wget -O guimain.py https://raw.githubusercontent.com/Red-BITH/database/main/start2.py")
         os.system("chmod +x start.py")
         print("\033[0;32mstart.py file succesfuly installed.")
     else:
@@ -149,7 +148,7 @@ def create_window():
     # ProgressBar oluştur
     global progress_bar
     progress_bar = ttk.Progressbar(root, orient='horizontal', mode='indeterminate', length=300)
-    progress_bar.place(relx=0.5, rely=0.7, anchor=tk.CENTER)
+    progress_bar.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
 
     root.mainloop()
 
