@@ -5,6 +5,12 @@ import time
 from tkinter import messagebox
 
 
+def install_libraries():
+    os.system("pip install requests")
+    os.system("pip install subprocess")
+    os.system("pip install bs4")
+    sil()  # start.py dosyasını indirme fonksiyonunu çağır
+
 def sil():
     import requests
     # Önce mevcut start.sh dosyasını sil
@@ -22,13 +28,6 @@ def sil():
         print("\033[0;32mstart.py file succesfuly installed.")
     else:
         print("\033[0;31mSOMETHING WENT WRONG!!!")
-
-def install_libraries():
-    os.system("pip install requests")
-    os.system("pip install subprocess")
-    os.system("pip install bs4")
-    sil()
-
 def create_request_files():
     current_directory = os.getcwd()
 
