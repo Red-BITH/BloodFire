@@ -1,6 +1,3 @@
-Özür dilerim, bir hata oluştu. İşte kodun tamamı:
-
-```python
 import tkinter as tk
 from tkinter import ttk
 from PIL import Image, ImageTk
@@ -151,6 +148,3 @@ def create_window():
     root.mainloop()
 
 create_window()
-```
-
-Bu kodda, `setup_libraries` fonksiyonu içinde ProgressBar'ı başlatıyoruz. Bu sayede Setup butonuna tıklandığında ProgressBar'ın görünür hale gelmesini sağlıyoruz.
