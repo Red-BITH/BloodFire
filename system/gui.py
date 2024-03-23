@@ -15,7 +15,6 @@ def install_libraries():
     os.system("pip install pygame")
     os.system("pip3 install termcolor")
     os.system("pip3 install tabulate")
-    os.system("apt install python3")
     os.system("apt install dmitry")
     os.system("apt install nmap")
     os.system("pip install requests")
