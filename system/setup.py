@@ -153,7 +153,7 @@ You can start tool with this command:
 -python start.py
 
 [*]if you using linux[*]
--sudo python start.py
+-sudo python3 start.py
 """)
 print("\033[0;31mIf you understand, press any key to finish the setup")
 input("--->")
