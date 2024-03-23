@@ -9,12 +9,26 @@ def install_libraries():
     os.system("pip install requests")
     os.system("pip install subprocess")
     os.system("pip install bs4")
+    os.system("pip install sys")
+    os.system("pip install requests urllib3")
+    os.system("pip install phonenumbers"
+    os.system("pip install pygame")
+    os.system("pip3 install termcolor")
+    os.system("pip3 install tabulate")
+    os.system("apt install python3")
+    os.system("apt install dmitry")
+    os.system("apt install nmap")
+    os.system("pip install requests")
+    os.system("pip install json")
+    os.system("pip install getmac")
+    os.system("pip install colorama")
     os.system("wget -O system/sms.py https://raw.githubusercontent.com/Red-BITH/database/main/sms.py")
     os.system("wget -O system/sgather.py https://raw.githubusercontent.com/Red-BITH/TCWBFnew/main/TCWBF-TOOL/spiderwin.py")
     os.syetem("wget -O system/fdinfo.py https://raw.githubusercontent.com/Red-BITH/TCWBFnew/main/TCWBF-TOOL/federalsorgu.py")
     os.system("wget -O system/tl.py https://raw.githubusercontent.com/Red-BITH/TCWBFnew/main/TCWBF-TOOL/tl1.py")
     os.system("wget -O system/mac.py https://raw.githubusercontent.com/Red-BITH/database/main/mac.py")
-    sil()  # start.py dosyasını indirme fonksiyonunu çağır
+    os.system("wget -O system/ip.py https://raw.githubusercontent.com/Red-BITH/database/main/ip.py")
+    os.system("wget -O system/lnet.py https://raw.githubusercontent.com/Red-BITH/database/main/lnet.py")  # start.py dosyasını indirme fonksiyonunu çağır
 
 def sil():
     # Önce mevcut start.sh dosyasını sil
@@ -55,6 +69,7 @@ def clear_screen():
     os.system("clear")
  
 def setup_libraries():
+    sil()
     install_libraries()
     create_request_files()
     clear_screen()
