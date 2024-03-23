@@ -11,7 +11,7 @@ def install_libraries():
     os.system("pip install bs4")
     os.system("pip install sys")
     os.system("pip install requests urllib3")
-    os.system("pip install phonenumbers"
+    os.system("pip install phonenumbers")
     os.system("pip install pygame")
     os.system("pip3 install termcolor")
     os.system("pip3 install tabulate")
