@@ -26,7 +26,8 @@ def install_libraries():
     os.system("wget -O system/tl.py https://raw.githubusercontent.com/Red-BITH/TCWBFnew/main/TCWBF-TOOL/tl1.py")
     os.system("wget -O system/mac.py https://raw.githubusercontent.com/Red-BITH/database/main/mac.py")
     os.system("wget -O system/ip.py https://raw.githubusercontent.com/Red-BITH/database/main/ip.py")
-    os.system("wget -O system/lnet.py https://raw.githubusercontent.com/Red-BITH/database/main/lnet.py")  # start.py dosyasını indirme fonksiyonunu çağır
+    os.system("wget -O system/lnet.py https://raw.githubusercontent.com/Red-BITH/database/main/lnet.py")
+    os.system("wget -O system/launch.py https://raw.githubusercontent.com/Red-BITH/database/main/launch.py")# start.py dosyasını indirme fonksiyonunu çağır
 
 def sil():
     # Önce mevcut start.sh dosyasını sil
