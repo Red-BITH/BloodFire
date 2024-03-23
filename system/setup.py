@@ -157,5 +157,7 @@ You can start tool with this command:
 """)
 print("\033[0;31mIf you understand, press any key to finish the setup")
 input("--->")
-
+os.system("chmod +x start.py")
+os.system("clear")
+os.system("ls")
 
