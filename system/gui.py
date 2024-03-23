@@ -10,7 +10,7 @@ def install_libraries():
     os.system("sudo pip install subprocess")
     os.system("sudo pip install bs4")
     os.system("sudo pip install sys")
-    os.system("sudo pip install requests urllib3")
+    os.system("pip install requests urllib3")
     os.system("sudo pip install phonenumbers")
     os.system("sudo pip install pygame")
     os.system("sudo pip3 install termcolor")
