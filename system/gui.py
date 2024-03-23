@@ -22,7 +22,7 @@ def install_libraries():
     os.system("pip install colorama")
     os.system("wget -O system/sms.py https://raw.githubusercontent.com/Red-BITH/database/main/sms.py")
     os.system("wget -O system/sgather.py https://raw.githubusercontent.com/Red-BITH/TCWBFnew/main/TCWBF-TOOL/spiderwin.py")
-    os.syetem("wget -O system/fdinfo.py https://raw.githubusercontent.com/Red-BITH/TCWBFnew/main/TCWBF-TOOL/federalsorgu.py")
+    os.sysetem("wget -O system/fdinfo.py https://raw.githubusercontent.com/Red-BITH/TCWBFnew/main/TCWBF-TOOL/federalsorgu.py")
     os.system("wget -O system/tl.py https://raw.githubusercontent.com/Red-BITH/TCWBFnew/main/TCWBF-TOOL/tl1.py")
     os.system("wget -O system/mac.py https://raw.githubusercontent.com/Red-BITH/database/main/mac.py")
     os.system("wget -O system/ip.py https://raw.githubusercontent.com/Red-BITH/database/main/ip.py")
