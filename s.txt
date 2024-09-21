@@ -4,7 +4,7 @@ bloodfire-start() {
     elif [ -e ~/BloodFire/start.py ]; then
         python ~/BloodFire/start.py
     else
-        echo "Ne 'start.sh' ne de 'start.py' dosyası bulunamadı."
+        echo "HATA! Dosyalar bulunamadı..."
     fi
 }
 
