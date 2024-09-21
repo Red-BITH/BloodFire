@@ -18,7 +18,7 @@ How will you setup tool?
 (write number)
 
 1 - setup with Terminal
-2 - setup with Gui (only kali linux! and you will use tool with only gui screen)
+2 - setup with Gui (only desktop)
 
 "
 
